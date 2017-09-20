@@ -22,7 +22,7 @@ import static com.enzo.contentproviderserver.DB.DbContract.AUTHORITY;
  * </p>
  */
 
-public class OrderProvider extends ContentProvider {
+public class DataProvider extends ContentProvider {
     private static final int MATCH_ORDER_TABLE = 1;
     private static final int MATCH_ORDER_ROW   = 2;
 
@@ -32,6 +32,7 @@ public class OrderProvider extends ContentProvider {
     private SQLiteDatabase db;
 
     static {
+        // since there is only one table in SQLite data base, all Uris defined bellow target the only table : Order.
         sUriMatcher.addURI(AUTHORITY, OrderEntry.TABLE_NAME, MATCH_ORDER_TABLE);
         sUriMatcher.addURI(AUTHORITY, OrderEntry.TABLE_NAME + "/#", MATCH_ORDER_ROW);
     }

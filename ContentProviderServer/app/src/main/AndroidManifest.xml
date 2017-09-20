@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <provider
+            android:name=".Provider.DataProvider"
+            android:authorities="com.enzo.contentproviderserver.provider"
+            android:permission="com.enzo.contentproviderserver.provider.permission.READ_WRITE"
+            android:exported="true"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

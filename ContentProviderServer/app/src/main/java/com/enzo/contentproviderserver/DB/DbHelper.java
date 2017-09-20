@@ -25,6 +25,9 @@ public class DbHelper extends SQLiteOpenHelper {
             OrderEntry.COUNTRY + " TEXT);";
     public static final String SQL_DELETE_ORDER_TABLE = "DROP TABLE IF EXISTS " + OrderEntry.TABLE_NAME;
 
+    public static final String SQL_INSERT_INIT_ORDER = "INSERT INTO " + OrderEntry.TABLE_NAME +
+            " VALUES (\"0\", \"Nexus 5X\", \"450\", \"USA\");";
+
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -32,6 +35,7 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_ORDER_TABLE);
+        db.execSQL(SQL_INSERT_INIT_ORDER);
     }
 
     @Override
