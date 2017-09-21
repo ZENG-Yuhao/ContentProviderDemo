@@ -4,10 +4,7 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 /**
- * <p>
- * Created by ZENG Yuhao. <br>
- * Contact: enzo.zyh@gmail.com
- * </p>
+ * Copied completely from Server App of provider for having coherent information to access the provider.
  */
 
 public final class DbContract {
