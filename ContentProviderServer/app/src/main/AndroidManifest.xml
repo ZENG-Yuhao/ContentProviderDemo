@@ -13,7 +13,6 @@
         <provider
             android:name=".Provider.DataProvider"
             android:authorities="com.enzo.contentproviderserver.provider"
-            android:permission="com.enzo.contentproviderserver.provider.permission.READ_WRITE"
             android:exported="true"/>
 
         <activity android:name=".MainActivity">
